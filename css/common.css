@@ -1,0 +1,208 @@
+
+html {
+    height: 100%;
+	background-color: #f3f3f6;
+	font-size: 17px;
+}
+body {
+	/* width: 780px !important; */    
+	margin: 1% 5% 1px 5%;
+    font-family: 'Open Sans', sans-serif;
+	background-color: #fff;
+    color: #3d3d3d;
+}
+
+
+.absolute {
+	position: absolute !important;
+	top: 0 !important;
+	left: 0 !important;
+}
+.hidden {
+	display: none !important;
+	visibility: hidden !important;
+}
+
+.main {
+	position: relative;
+	/* top: -7px;
+	left: 0; */
+    padding: 2% 5% 2% 5%;
+    border-top: 5px solid #695da8;	
+}
+
+.main .logo {
+    width: 5%;
+    float: right;    
+}
+
+
+/* ***** BUTTONS GENERAL */
+
+.btn,
+button {
+	transition: opacity 250ms ease-out;
+	transition: transform 250ms ease-out;
+	outline: none;
+}
+
+.btn {
+	cursor: pointer;
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;    
+    color: #ffffff;    
+    background: #33bdbd;
+    padding: 1% 4% 1% 4%;
+    margin: 0 40% 0 40%;
+    text-decoration: none;
+}
+
+.btn-reset {
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;    
+    color: #ffffff;    
+    background: #33bdbd;
+    padding: 1% 2% 1% 2%;
+    margin: 1% 0 0 80%;
+    text-decoration: none;    
+}
+
+.btn.disabled {
+	opacity: .3;
+	cursor: default;
+}
+
+.icons-container {
+	/* margin: 40px 0; */
+	max-width: 780px;
+	margin: 0 0 10% 0;  
+    display: block;
+}
+
+.circle-ico {
+	position: relative;
+	padding: 0;
+	float: left;
+	margin: 0 1%;
+	width: calc(90% / 5);
+	padding-top: calc(90% / 5);
+	background-color: #d9eaf7;
+	box-sizing: content-box;
+	border-radius: 100px;
+}
+
+.circle-ico .center {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: calc(100% - 10px);
+	height: calc(100% - 10px);
+	background: #33bdbd;	
+	border: 5px solid #fff;
+	border-radius: 100px;    
+}
+.circle-ico.selected {
+	border-color: #bddaf1;
+}
+.circle-ico.selected .center {
+	background-color: #ff931e;
+}
+
+.circle-ico:hover .center {
+	background-color: #ff931e;
+}
+.circle-ico p {
+	position: absolute;
+	top: calc(50% - 12px);
+	left: 0;
+	padding: 0 12px;
+	margin: 0;
+	width: 100%;
+	font-size: 80%;
+	font-weight: bold;
+	text-align: center;
+	color: #fff;
+	line-height: 120%;
+	overflow-wrap: break-word;
+}
+
+.circle-ico img {
+    position: absolute;
+	top: 15px;
+	left: 5px;
+	width: calc(90% - 10px);
+	height: calc(90% - 10px);
+}
+
+.circle-ico .label {    
+    padding-top: 60%;
+    color: #33bdbd;    
+    font-size: 14px;
+}
+
+.circle-ico-answer {
+    position: relative;
+    padding: 0;
+	float: left;
+	margin: 0 3% 0 1%;
+	width: calc(90% / 5);
+	padding-top: calc(90% / 5);
+	background-color: #fff;	
+	border-radius: 100px;
+    border-style: dashed;
+    border-color: #d7d7d7;
+    box-sizing: content-box;
+}
+
+.answer {
+    float: left;
+    margin-bottom: 3%;
+}
+
+.answer-description {    
+    color: #7d7987;
+    padding: 3%;
+}
+
+.title-1 {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: bold;
+	font-size: 225%;
+	color: #ff931e;
+    margin-top: 50px;
+}
+
+.question {
+	font-size: 100%;
+	color: #7d7987;
+}
+
+.instructions {
+	font-size: 100%;
+	color: #ff931e;
+}
+
+.feedback {
+	font-size: 100%;
+	color: #7d7987;
+	margin-bottom: 40px;
+}
+
+.img-hero {
+	width: 100%;
+	margin: 30px 0;
+}
+
+
+@media (min-width: 560px) {
+	html {
+		font-size: 21px;
+	}
+	.circle-ico {
+		margin: 0 2%;
+		width: calc(80% / 5);
+		padding-top: calc(80% / 5);
+	}
+}

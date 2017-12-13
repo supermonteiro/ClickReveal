@@ -1,0 +1,57 @@
+{
+
+    "title": "WELCOMING ENVIRONMENT",
+
+    "question": "Our guests trust that each time they visit our restaurants that we will uphold the highest standards of hygienne and cleanliness.",
+
+    "instructions": "Drag the cleaning tasks you think are the best way to achieve a welcoming environment for our guests.",
+
+    "feedback_correct": "some correct feedback text",
+
+    "feedback_incorrect": "some incorrect feedback text",
+
+    "primary_color": "#33bdbd",
+
+    "accent_color_1": "#ffc300",
+
+    "accent_color_2": "#ff931e",
+
+    "options": [
+
+                    {
+
+                                    "icon": "images/icon_1.png",
+
+                                    "icon_label": "Icon One Label",
+
+                                    "target_text": "Here is some text for the first option. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec rhoncus augue. Ut erat dui, imperdiet sed lacus quis."
+
+                    },
+
+                    {
+
+                                    "icon": "images/icon_2.png",
+
+                                    "icon_label": "Icon Two Label",
+
+                                    "target_text": "Here is some text for the second option. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec rhoncus augue. Ut erat dui, imperdiet sed lacus quis.."
+
+                    },
+
+                    {
+
+                                    "icon": "images/icon_3.png",
+
+                                    "icon_label": "Icon Three Label",
+
+                                    "target_text": "Here is some text for the third option. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec rhoncus augue. Ut erat dui, imperdiet sed lacus quis."
+
+                    }
+
+    ],
+
+    "randomize_options": true,
+
+    "allow_reset": false
+
+}

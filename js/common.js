@@ -18,6 +18,8 @@ function initActivity() {
 	var delay = .1;
 	
 	TweenMax.set($('.circle-ico'), {opacity: 0});
+	
+	/* randomly re-order the icons and labels*/
 	activity_data.options.sort(function(a, b){return 0.5 - Math.random()});
 	
 	$.each(activity_data.options, function(index, obj){

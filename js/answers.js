@@ -1,3 +1,4 @@
+/*
 function createAnswers() {
 	
 	var iconsContainer = $('.icons-container').empty(),
@@ -10,11 +11,12 @@ function createAnswers() {
 				'<div class="center"><img src="'+(obj.icon)+'"></div>'+
 				'<p class="label">'+obj.icon_label+'</p> </div>'
 			)			
-			.appendTo(iconsContainer);
-	});
-	
+			.appendTo(iconsContainer);		
+	});	
+	var test = "this is a test".appendTo(iconsContainer);
+	console.log(iconsContainer);
 }
-/*
+
 setContent(0);
 
 function setContent(index) {
@@ -28,7 +30,8 @@ function setContent(index) {
 		var instructions = $('.instructions')
 			.html(activity_data.instructions);
 }
-*/
+
 function initPage() {
 	setTimeout(createAnswers, 2000);
 }
+*/

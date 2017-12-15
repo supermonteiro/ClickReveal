@@ -19,61 +19,50 @@
 	<body>
 		<div class="main">			
             <img class="logo" src="images/md_logo.png">
-            <h1 class="title-1">WELCOMING ENVIRONMENT</h1>
-			<p class="question">Our guests trust that each time they visit our restaurants that we will uphold the highest standards of hygienne and cleanliness.</p>
-			<p class="instructions">Drag the cleaning tasks you think are the best way to achieve a welcoming environment for our guests.</p>
-			<div id='icons' class="icons-container clearfix">
+            <h1 class="title-1"></h1>
+			<p class="question"></p>
+			<p class="instructions"></p>
+			<!-- icons -->
+			<div id='icons' class="icons-container clearfix">				
 				<div class="btn_reveal circle-ico" draggable="true">
-					<div class="center"><img src="images/icon_1.png"></div>
-					<p class="label">Button One</p>
-				</div>
-				<div class="btn_reveal circle-ico">
 					<div class="center"></div>
-					<p class="label">Button Two</p>
 				</div>
+
 				<div class="btn_reveal circle-ico">
-					<div class="center"></div>
-					<p class="label">Button Three</p>
+					<div class="center"></div>					
 				</div>
+
 				<div class="btn_reveal circle-ico">
-					<div class="center"></div>
-					<p class="label">Button Four</p>
+					<div class="center"></div>					
 				</div>
+
 				<div class="btn_reveal circle-ico">
-					<div class="center"></div>
-					<p class="label">Button Five</p>
+					<div class="center"></div>					
+				</div>
+
+				<div class="btn_reveal circle-ico">
+					<div class="center"></div>					
 				</div>
 			</div>
-			<div id='answers' class="icons-container clearfix">
-                <div class="answer">
-                    <div class="btn_reveal circle-ico-answer">
-                        <div class="center"></div>                    
-                    </div>
-                    <p class="answer-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dictum tortor vel eros euismod ultricies. </p>
+			<!-- labels -->
+			<div class="icons-labels-container clearfix">
+				<div class='icons-labels '><p id='ico-label-0'></p></div>
+				<div class='icons-labels '><p id='ico-label-1'></p></div>
+				<div class='icons-labels '><p id='ico-label-2'></p></div>
+				<div class='icons-labels '><p id='ico-label-3'></p></div>
+				<div class='icons-labels '><p id='ico-label-4'></p></div>
+			</div>	
+			<!-- answers -->
+			<div id='answers' class="answers-container clearfix">
+                <div class="answer" id="answer-0">                    
                 </div>
-                <div class="answer">
-                    <div class="btn_reveal circle-ico-answer">
-                        <div class="center"></div>                    
-                    </div>
-                    <p class="answer-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dictum tortor vel eros euismod ultricies. </p>
+                <div class="answer" id="answer-1">                    
                 </div>
-                <div class="answer">
-                    <div class="btn_reveal circle-ico-answer">
-                        <div class="center"></div>                    
-                    </div>
-                    <p class="answer-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dictum tortor vel eros euismod ultricies. </p>
+                <div class="answer" id="answer-2">                    
                 </div>
-                <div class="answer">
-                    <div class="btn_reveal circle-ico-answer">
-                        <div class="center"></div>                    
-                    </div>
-                    <p class="answer-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dictum tortor vel eros euismod ultricies. </p>
+                <div class="answer" id="answer-3">                    
                 </div>
-                <div class="answer">
-                    <div class="btn_reveal circle-ico-answer">
-                        <div class="center"></div>                    
-                    </div>
-                    <p class="answer-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dictum tortor vel eros euismod ultricies. </p>
+                <div class="answer" id="answer-4">                    
                 </div>                
 			</div>
             <button id="submitBtn" class="btn">Submit</button>
@@ -83,12 +72,12 @@
 		
 		<!-- Load JS =============================-->
 			<script src="js/vendor/jquery-3.2.1.min.js"></script>
+			<script src="js/vendor/jquery-ui.min.js"></script>
 			<script src="js/vendor/popper.min.js"></script>
 			<script src="js/vendor/bootstrap.min.js"></script>
 			<script src="js/vendor/tweenmax.min.js"></script>
 			
 			<script src="js/common.js"></script>
-            <script src="js/answers.js"></script>
-			<script src="js/click_reveal.js"></script>
+            <script src="js/answers.js"></script>							
 	</body>
 </html>

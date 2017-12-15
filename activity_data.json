@@ -22,7 +22,7 @@
 
                                     "icon": "images/icon_1.png",
 
-                                    "icon_label": "Icon One Label",
+                                    "icon_label": "Floors",
 
                                     "target_text": "Here is some text for the first option. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec rhoncus augue. Ut erat dui, imperdiet sed lacus quis."
 
@@ -32,7 +32,7 @@
 
                                     "icon": "images/icon_2.png",
 
-                                    "icon_label": "Icon Two Label",
+                                    "icon_label": "Trash",
 
                                     "target_text": "Here is some text for the second option. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec rhoncus augue. Ut erat dui, imperdiet sed lacus quis.."
 
@@ -42,9 +42,29 @@
 
                                     "icon": "images/icon_3.png",
 
-                                    "icon_label": "Icon Three Label",
+                                    "icon_label": "Bathrooms",
 
                                     "target_text": "Here is some text for the third option. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec rhoncus augue. Ut erat dui, imperdiet sed lacus quis."
+
+                    },
+
+                    {
+
+                                    "icon": "images/icon_4.png",
+
+                                    "icon_label": "Windows",
+
+                                    "target_text": "Here is some text for the fourth option. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec rhoncus augue. Ut erat dui, imperdiet sed lacus quis."
+
+                    },
+
+                    {
+
+                                    "icon": "images/icon_5.png",
+
+                                    "icon_label": "Tables",
+
+                                    "target_text": "Here is some text for the fifth option. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec rhoncus augue. Ut erat dui, imperdiet sed lacus quis."
 
                     }
 
@@ -52,6 +72,7 @@
 
     "randomize_options": true,
 
-    "allow_reset": false
+    "allow_reset": false,
+    "randomize_icons": true
 
 }

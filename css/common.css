@@ -69,6 +69,10 @@ button {
     text-decoration: none;    
 }
 
+.btn_reveal {
+	opacity: 1;
+}
+
 .btn.disabled {
 	opacity: .3;
 	cursor: default;
@@ -77,8 +81,26 @@ button {
 .icons-container {
 	/* margin: 40px 0; */
 	max-width: 780px;
-	margin: 0 0 10% 0;  
+	margin: 0 0 2% 0;  
     display: block;
+}
+
+.icons-labels-container {
+	max-width: 780px;
+    display: block;
+	position: relative;
+	margin: 0 0 2% 0;
+}
+
+.icons-labels {	
+	position: relative;	
+	float: left;
+	margin: 0 1%;
+	width: calc(90% / 5);	
+	box-sizing: content-box;	
+    color: #33bdbd;    
+    font-size: 14px;
+	text-align: center;
 }
 
 .circle-ico {
@@ -91,6 +113,7 @@ button {
 	background-color: #d9eaf7;
 	box-sizing: content-box;
 	border-radius: 100px;
+	opacity: 0;
 }
 
 .circle-ico .center {
@@ -101,7 +124,11 @@ button {
 	height: calc(100% - 10px);
 	background: #33bdbd;	
 	border: 5px solid #fff;
-	border-radius: 100px;    
+	border-radius: 100px; 
+	
+	background-size: 55% 55%;
+	background-repeat: no-repeat;
+	background-position: center;   
 }
 .circle-ico.selected {
 	border-color: #bddaf1;
@@ -112,20 +139,6 @@ button {
 
 .circle-ico:hover .center {
 	background-color: #ff931e;
-}
-.circle-ico p {
-	position: absolute;
-	top: calc(50% - 12px);
-	left: 0;
-	padding: 0 12px;
-	margin: 0;
-	width: 100%;
-	font-size: 80%;
-	font-weight: bold;
-	text-align: center;
-	color: #fff;
-	line-height: 120%;
-	overflow-wrap: break-word;
 }
 
 .circle-ico img {
@@ -159,6 +172,13 @@ button {
 .answer {
     float: left;
     margin-bottom: 3%;
+}
+
+.answers-container {
+	/* margin: 40px 0; */
+	max-width: 780px;
+	margin: 5% 0 10% 0;  
+    display: block;
 }
 
 .answer-description {    

@@ -18,15 +18,48 @@ function initActivity() {
 	var delay = .1;
 	
 	TweenMax.set($('.circle-ico'), {opacity: 0});
+	activity_data.options.sort(function(a, b){return 0.5 - Math.random()});
 	
-	$.each($('.circle-ico p'), function(index, obj){
-		var icon = $(this)
-			/* .html() */
-			.centerLabel();
-		
-		TweenMax.fromTo($(this), .25, {opacity: 0}, {delay: (delay*index), opacity: 1, ease: Power2.easeOut});
-		
+	$.each(activity_data.options, function(index, obj){
+		var icon = $('.circle-ico:eq('+index+')');
+		var label = $('#ico-label-'+index).html(obj.icon_label);
+		icon.children('.center').css({
+			'background-image': 'url('+obj.icon+')'
+		});
+		var answer = $('#answer-'+index)
+		.data({index: index, info: obj})
+		.html(
+			'<div class="btn_reveal circle-ico-answer"> <div class="center"></div> </div>' +
+			'<p class="answer-description">'+obj.target_text+'</p>'
+		);
+		TweenMax.fromTo(icon, .25, {opacity: 0}, {delay: (delay*index), opacity: 1, ease: Power2.easeOut});
 	});
+	
+	$('.title-1').html(activity_data.title);
+	$('.question').html(activity_data.question);
+	$('.instructions').html(activity_data.instructions);
+	
+	if (!activity_data.allow_reset) {
+		$('.btn-reset').removeClass('btn_reveal');
+		$('.btn-reset').addClass('disabled');
+	} else {
+		$('.btn-reset').removeClass('disabled');
+		$('.btn-reset').addClass('btn_reveal');
+	}
+	
+	/* code for dinamic icons
+		var icon = $('<div class="combo">')
+			.data({index: index, info: obj})
+			.html(
+				'<div class="btn_reveal circle-ico " id="ico-label-'+(index+1)+'">'+
+				'<div class="center"><img src="'+(obj.icon)+'"></div></div> '+
+				'<div class="icons-labels"><p id="ico-label-'+(index+1)+'">'+obj.icon_label+'</p> </div>'
+			)			
+			.appendTo(iconsContainer);
+		
+		var labels = $()			
+			.appendTo(iconsContainer);
+		*/
 }
 
 function getData(call_data_file) {
@@ -42,9 +75,9 @@ function getData(call_data_file) {
 function initListeners() {
 	
 	$(window).on('load resize orientationchange', function (e) {
-		$.each($('.circle-ico p'), function(index, obj){
+		$.each($('.icons-labels'), function(index, obj){
 			$(this).centerLabel();
-		});
+		});				
 	});
 }
 

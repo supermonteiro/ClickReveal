@@ -24,7 +24,7 @@
 
                                     "icon_label": "Floors",
 
-                                    "target_text": "Here is some text for the first option. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec rhoncus augue. Ut erat dui, imperdiet sed lacus quis."
+                                    "target_text": "Floors. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec rhoncus augue. Ut erat dui, imperdiet sed lacus quis."
 
                     },
 
@@ -34,7 +34,7 @@
 
                                     "icon_label": "Trash",
 
-                                    "target_text": "Here is some text for the second option. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec rhoncus augue. Ut erat dui, imperdiet sed lacus quis.."
+                                    "target_text": "Trash. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec rhoncus augue. Ut erat dui, imperdiet sed lacus quis.."
 
                     },
 
@@ -44,7 +44,7 @@
 
                                     "icon_label": "Bathrooms",
 
-                                    "target_text": "Here is some text for the third option. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec rhoncus augue. Ut erat dui, imperdiet sed lacus quis."
+                                    "target_text": "Bathrooms. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec rhoncus augue. Ut erat dui, imperdiet sed lacus quis."
 
                     },
 
@@ -54,7 +54,7 @@
 
                                     "icon_label": "Windows",
 
-                                    "target_text": "Here is some text for the fourth option. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec rhoncus augue. Ut erat dui, imperdiet sed lacus quis."
+                                    "target_text": "Windows. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec rhoncus augue. Ut erat dui, imperdiet sed lacus quis."
 
                     },
 
@@ -64,7 +64,7 @@
 
                                     "icon_label": "Tables",
 
-                                    "target_text": "Here is some text for the fifth option. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec rhoncus augue. Ut erat dui, imperdiet sed lacus quis."
+                                    "target_text": "Tables. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec rhoncus augue. Ut erat dui, imperdiet sed lacus quis."
 
                     }
 

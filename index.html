@@ -24,55 +24,26 @@
 			<p class="instructions"></p>
 			<!-- icons -->
 			<div id='icons' class="icons-container clearfix">				
-				<div class="btn_reveal circle-ico" draggable="true">
-					<div class="center"></div>
-				</div>
-
-				<div class="btn_reveal circle-ico">
-					<div class="center"></div>					
-				</div>
-
-				<div class="btn_reveal circle-ico">
-					<div class="center"></div>					
-				</div>
-
-				<div class="btn_reveal circle-ico">
-					<div class="center"></div>					
-				</div>
-
-				<div class="btn_reveal circle-ico">
-					<div class="center"></div>					
-				</div>
+				
 			</div>
 			<!-- labels -->
-			<div class="icons-labels-container clearfix">
-				<div class='icons-labels '><p id='ico-label-0'></p></div>
-				<div class='icons-labels '><p id='ico-label-1'></p></div>
-				<div class='icons-labels '><p id='ico-label-2'></p></div>
-				<div class='icons-labels '><p id='ico-label-3'></p></div>
-				<div class='icons-labels '><p id='ico-label-4'></p></div>
+			<div id='labels' class="icons-labels-container clearfix">
+				
 			</div>	
 			<!-- answers -->
 			<div id='answers' class="answers-container clearfix">
-                <div class="answer" id="answer-0">                    
-                </div>
-                <div class="answer" id="answer-1">                    
-                </div>
-                <div class="answer" id="answer-2">                    
-                </div>
-                <div class="answer" id="answer-3">                    
-                </div>
-                <div class="answer" id="answer-4">                    
-                </div>                
+                              
 			</div>
-            <button id="submitBtn" class="btn">Submit</button>
-            <button id="resetBtn" class="btn btn-reset">Reset</button>
+            <button id="submitBtn" class="btn" onclick="gradeMarks()">Submit</button>
+			<button id="successBtn" class="btn disabled hidden" >Success!</button>
+			<button id="retryBtn" class="btn btn-retry hidden" onclick="retry()">Retry</button>
+            <button id="resetBtn" class="btn btn-reset" onclick="retry()">Reset</button>
 		</div>
 		
 		
 		<!-- Load JS =============================-->
 			<script src="js/vendor/jquery-3.2.1.min.js"></script>
-			<script src="js/vendor/jquery-ui.min.js"></script>
+			<script src="js/vendor/jquery-ui.js"></script>
 			<script src="js/vendor/popper.min.js"></script>
 			<script src="js/vendor/bootstrap.min.js"></script>
 			<script src="js/vendor/tweenmax.min.js"></script>

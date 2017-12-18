@@ -58,6 +58,18 @@ button {
     text-decoration: none;
 }
 
+.btn-retry {
+	cursor: pointer;
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;    
+    color: #ffffff;    
+    background: #33bdbd;
+    padding: 1% 4.7% 1% 4.7%;
+    margin: 0 40% 0 40%;
+    text-decoration: none;
+}
+
 .btn-reset {
     -webkit-border-radius: 28;
     -moz-border-radius: 28;
@@ -77,6 +89,8 @@ button {
 	opacity: .3;
 	cursor: default;
 }
+
+/* ***** ICONS */
 
 .icons-container {
 	/* margin: 40px 0; */
@@ -114,6 +128,7 @@ button {
 	box-sizing: content-box;
 	border-radius: 100px;
 	opacity: 0;
+	z-index: +1;
 }
 
 .circle-ico .center {
@@ -135,6 +150,10 @@ button {
 }
 .circle-ico.selected .center {
 	background-color: #ff931e;
+}
+
+.circle-ico:hover {
+	background-color: #ffc98e;
 }
 
 .circle-ico:hover .center {
@@ -160,14 +179,20 @@ button {
     padding: 0;
 	float: left;
 	margin: 0 3% 0 1%;
-	width: calc(90% / 5);
-	padding-top: calc(90% / 5);
+	width: calc(75% / 5);
+	padding-top: calc(75% / 5);
 	background-color: #fff;	
 	border-radius: 100px;
     border-style: dashed;
     border-color: #d7d7d7;
-    box-sizing: content-box;
+    box-sizing: content-box;	
 }
+
+.circle-ico-answer:hover {
+	border-color: #ff931e;
+}
+
+/* ***** ANSWERS */
 
 .answer {
     float: left;
@@ -225,4 +250,55 @@ button {
 		width: calc(80% / 5);
 		padding-top: calc(80% / 5);
 	}
+}
+
+/* ***** GRADING */
+
+.correct-effect {
+	background-color:#99ebc6;		
+}
+
+.correct-effect .center{
+	background-color:#47da97;		
+}
+
+.right-mark {
+	border-radius: 100px;
+	border-style: solid;
+	border-color: #33bdbd;
+	border-width: 8%;
+	color: #47da97;
+	background-color: white;
+	margin-top: 40%;
+	margin-left: 85%;
+}
+
+.wrong-effect {
+	background-color: #ec4242;
+}
+
+.wrong-effect .center {
+	background-color: #ec4242;
+}
+
+.wrong-mark {
+	border-radius: 100px;
+	border-style: solid;
+	border-color: #33bdbd;
+	border-width: 8%;
+	height: calc(80% / 3);
+	width: calc(80% / 3);
+	text-align: center;
+	color: #ec4242;
+	background-color: white;
+	margin-top: 40%;
+	margin-left: 85%;
+}
+
+.draggable {
+	
+}
+
+.droppable {
+	
 }

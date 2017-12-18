@@ -1,5 +1,6 @@
 
 var activity_data = null;
+var correctIcons = 0;
 
 jQuery.fn.extend({
 	centerLabel: function() {
@@ -20,20 +21,54 @@ function initActivity() {
 	TweenMax.set($('.circle-ico'), {opacity: 0});
 	
 	/* randomly re-order the icons and labels*/
-	activity_data.options.sort(function(a, b){return 0.5 - Math.random()});
+	if (activity_data.randomize_options) {
+		activity_data.options.sort(function(a, b){return 0.5 - Math.random()});	
+	}	
+	
+	var iconsContainer = $('.icons-container').empty(),
+			initCount = 0;
+	
+	var labelsContainer = $('.icons-labels-container').empty(),
+			initCount = 0;
+	
+	var answersContainer = $('.answers-container').empty(),
+			initCount = 0;
 	
 	$.each(activity_data.options, function(index, obj){
-		var icon = $('.circle-ico:eq('+index+')');
-		var label = $('#ico-label-'+index).html(obj.icon_label);
+		/* populate icons */		
+		var icons = $('<div class="btn_reveal circle-ico draggable" id="'+obj.icon_label+'">')
+			.data({index: "answer"+index, info: obj})
+			.html('<div class="center"><img src="'+(obj.icon)+'"><i class="grade" aria-hidden="true"></i></div></div>')		
+			.appendTo(iconsContainer);
+		
+		var icon = $('.circle-ico:eq('+index+')');				
 		icon.children('.center').css({
 			'background-image': 'url('+obj.icon+')'
 		});
-		var answer = $('#answer-'+index)
-		.data({index: index, info: obj})
-		.html(
-			'<div class="btn_reveal circle-ico-answer"> <div class="center"></div> </div>' +
-			'<p class="answer-description">'+obj.target_text+'</p>'
-		);
+		
+		$('.draggable').draggable({
+		  containment: '.main',
+		  stack: '#icons div',
+		  cursor: 'move',
+		  revert: true
+		});				
+		
+		/* populate labels */
+		var labels = $('<div class="icons-labels"><p id="ico-label-'+(index)+'">'+obj.icon_label+'</p> </div>')			
+			.appendTo(labelsContainer);
+		
+		/* populate answers */		
+		var answers = $('<div class="answer">')
+			.data({answer: index, info: obj})
+			.html(
+				'<div id="answer'+index+'" class="btn_reveal circle-ico-answer droppable"> <div class="center"></div> </div>' +
+				'<p class="answer-description">'+obj.target_text+'</p>')			
+			.appendTo(answersContainer);
+		$('.droppable').droppable({
+			accept: '#icons div',      		
+    		drop: handleDropEvent
+  		} );
+		
 		TweenMax.fromTo(icon, .25, {opacity: 0}, {delay: (delay*index), opacity: 1, ease: Power2.easeOut});
 	});
 	
@@ -49,19 +84,6 @@ function initActivity() {
 		$('.btn-reset').addClass('btn_reveal');
 	}
 	
-	/* code for dinamic icons
-		var icon = $('<div class="combo">')
-			.data({index: index, info: obj})
-			.html(
-				'<div class="btn_reveal circle-ico " id="ico-label-'+(index+1)+'">'+
-				'<div class="center"><img src="'+(obj.icon)+'"></div></div> '+
-				'<div class="icons-labels"><p id="ico-label-'+(index+1)+'">'+obj.icon_label+'</p> </div>'
-			)			
-			.appendTo(iconsContainer);
-		
-		var labels = $()			
-			.appendTo(iconsContainer);
-		*/
 }
 
 function getData(call_data_file) {
@@ -81,6 +103,69 @@ function initListeners() {
 			$(this).centerLabel();
 		});				
 	});
+}
+
+function handleDropEvent( event, ui ) {
+	var draggable = ui.draggable;  	
+	var answerId = $(this).attr('id');	
+  	var iconIndex = ui.draggable.data('index');
+	
+	ui.draggable.draggable( 'disable' );
+    $(this).droppable( 'disable' );
+	ui.draggable.position( { of: $(this), my: 'center center', at: 'center center' } );
+	ui.draggable.draggable( 'option', 'revert', false );
+	
+	if (answerId == iconIndex) {
+		ui.draggable.addClass( 'correct' ); 		
+    	correctIcons++;
+	} else {
+		ui.draggable.addClass( 'wrong' );
+	}
+}
+
+function gradeMarks() {
+	$.each($('.correct'), function(index, obj) {		
+		$('.correct i').addClass('fa fa-check right-mark');
+		//$('.correct').removeClass('correct');
+	});
+	$.each($('.wrong'), function(index, obj) {
+		$('.wrong i').addClass('fa fa-times wrong-mark');
+	});
+	
+	if (correctIcons < 5) {		
+		$('#retryBtn').removeClass('hidden');	
+	} else {
+		$('#successBtn').removeClass('hidden');
+	}
+	$('#submitBtn').addClass('hidden');	
+}
+
+function retry(event, ui) {
+	/*
+	$.each($('.ui-draggable-disabled'), function(index, obj) {				
+		$('.ui-draggable-disabled').removeClass('ui-draggable-disabled');
+		ui.draggable.draggable( 'option', 'revert', 'invalid' );		
+	});
+	
+	$.each($('.ui-droppable-disabled'), function(index, obj) {				
+		$('.ui-droppable-disabled').removeClass('ui-droppable-disabled');
+	});
+	
+	$.each($('.correct'), function(index, obj) {		
+		$('.correct i').removeClass('fa fa-check right-mark');
+		$('.correct').removeClass('correct');
+	});
+	
+	$.each($('.wrong'), function(index, obj) {		
+		$('.wrong i').removeClass('fa fa-times wrong-mark');
+		$('.wrong').removeClass('wrong');
+	});
+	
+	correctIcons = 0;
+	$('#submitBtn').removeClass('hidden');	
+	$('#retryBtn').addClass('hidden');
+	*/
+	location.reload();
 }
 
 function getFontColor(hex) {

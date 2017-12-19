@@ -37,7 +37,8 @@
             <button id="submitBtn" class="btn" onclick="gradeMarks()">Submit</button>
 			<button id="successBtn" class="btn disabled hidden" >Success!</button>
 			<button id="retryBtn" class="btn btn-retry hidden" onclick="retry()">Retry</button>
-            <button id="resetBtn" class="btn btn-reset" onclick="retry()">Reset</button>
+            <button id="resetBtnDis" class="btn btn-reset disabled" disabled>Reset</button>
+            <button id="resetBtn" class="btn btn-reset hidden" onclick="retry()">Reset</button>
 		</div>
 		
 		
@@ -45,10 +46,10 @@
 			<script src="js/vendor/jquery-3.2.1.min.js"></script>
 			<script src="js/vendor/jquery-ui.js"></script>
 			<script src="js/vendor/popper.min.js"></script>
+			<script src="js/vendor/css.js"></script>
 			<script src="js/vendor/bootstrap.min.js"></script>
 			<script src="js/vendor/tweenmax.min.js"></script>
 			
-			<script src="js/common.js"></script>
-            <script src="js/answers.js"></script>							
+			<script src="js/common.js"></script>            							
 	</body>
 </html>

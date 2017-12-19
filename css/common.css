@@ -51,8 +51,7 @@ button {
     -webkit-border-radius: 28;
     -moz-border-radius: 28;
     border-radius: 28px;    
-    color: #ffffff;    
-    background: #33bdbd;
+    color: #ffffff;        
     padding: 1% 4% 1% 4%;
     margin: 0 40% 0 40%;
     text-decoration: none;
@@ -63,8 +62,7 @@ button {
     -webkit-border-radius: 28;
     -moz-border-radius: 28;
     border-radius: 28px;    
-    color: #ffffff;    
-    background: #33bdbd;
+    color: #ffffff;        
     padding: 1% 4.7% 1% 4.7%;
     margin: 0 40% 0 40%;
     text-decoration: none;
@@ -75,7 +73,6 @@ button {
     -moz-border-radius: 28;
     border-radius: 28px;    
     color: #ffffff;    
-    background: #33bdbd;
     padding: 1% 2% 1% 2%;
     margin: 1% 0 0 80%;
     text-decoration: none;    
@@ -87,7 +84,7 @@ button {
 
 .btn.disabled {
 	opacity: .3;
-	cursor: default;
+	cursor: not-allowed;
 }
 
 /* ***** ICONS */
@@ -111,8 +108,7 @@ button {
 	float: left;
 	margin: 0 1%;
 	width: calc(90% / 5);	
-	box-sizing: content-box;	
-    color: #33bdbd;    
+	box-sizing: content-box;	        
     font-size: 14px;
 	text-align: center;
 }
@@ -123,8 +119,7 @@ button {
 	float: left;
 	margin: 0 1%;
 	width: calc(90% / 5);
-	padding-top: calc(90% / 5);
-	background-color: #d9eaf7;
+	padding-top: calc(90% / 5);	
 	box-sizing: content-box;
 	border-radius: 100px;
 	opacity: 0;
@@ -136,28 +131,39 @@ button {
 	top: 5px;
 	left: 5px;
 	width: calc(100% - 10px);
-	height: calc(100% - 10px);
-	background: #33bdbd;	
+	height: calc(100% - 10px);		
 	border: 5px solid #fff;
-	border-radius: 100px; 
-	
+	border-radius: 100px;	
 	background-size: 55% 55%;
 	background-repeat: no-repeat;
 	background-position: center;   
 }
-.circle-ico.selected {
-	border-color: #bddaf1;
-}
-.circle-ico.selected .center {
-	background-color: #ff931e;
+
+.circle-ghost-ico {
+	position: absolute;	
+	float: left;
+	margin: 0 1.5%;
+	width: calc(53% / 5);
+	padding-top: calc(53% / 5);
+	background-color: #f9f9f9;
+	box-sizing: content-box;
+	border-radius: 100px;
+	display: inline-block;
+	
 }
 
-.circle-ico:hover {
-	background-color: #ffc98e;
-}
-
-.circle-ico:hover .center {
-	background-color: #ff931e;
+.circle-ghost-ico .center {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: calc(100% - 10px);
+	height: calc(100% - 10px);
+	background: #ebebeb;	
+	border: 5px solid #fff;
+	border-radius: 100px; 
+	background-size: 55% 55%;
+	background-repeat: no-repeat;
+	background-position: center;   
 }
 
 .circle-ico img {
@@ -188,10 +194,6 @@ button {
     box-sizing: content-box;	
 }
 
-.circle-ico-answer:hover {
-	border-color: #ff931e;
-}
-
 /* ***** ANSWERS */
 
 .answer {
@@ -214,8 +216,7 @@ button {
 .title-1 {
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: bold;
-	font-size: 225%;
-	color: #ff931e;
+	font-size: 225%;	
     margin-top: 50px;
 }
 
@@ -225,8 +226,7 @@ button {
 }
 
 .instructions {
-	font-size: 100%;
-	color: #ff931e;
+	font-size: 100%;	
 }
 
 .feedback {
@@ -264,8 +264,7 @@ button {
 
 .right-mark {
 	border-radius: 100px;
-	border-style: solid;
-	border-color: #33bdbd;
+	border-style: solid;	
 	border-width: 8%;
 	color: #47da97;
 	background-color: white;
@@ -284,7 +283,6 @@ button {
 .wrong-mark {
 	border-radius: 100px;
 	border-style: solid;
-	border-color: #33bdbd;
 	border-width: 8%;
 	height: calc(80% / 3);
 	width: calc(80% / 3);
@@ -295,10 +293,3 @@ button {
 	margin-left: 85%;
 }
 
-.draggable {
-	
-}
-
-.droppable {
-	
-}

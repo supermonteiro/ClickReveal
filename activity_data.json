@@ -11,6 +11,10 @@
     "feedback_incorrect": "some incorrect feedback text",
 
     "primary_color": "#33bdbd",
+    
+    "border_color_1": "#d9eaf7",
+    
+    "border_color_2": "#ffc98e",
 
     "accent_color_1": "#ffc300",
 
@@ -72,7 +76,7 @@
 
     "randomize_options": true,
 
-    "allow_reset": false,
+    "allow_reset": true,
     "randomize_icons": true
 
 }
